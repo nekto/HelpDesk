@@ -2,7 +2,7 @@
  
 /*
  * Following code will get single user details
- * A user is identified by product id (pid)
+ * A user is identified by user id (pid)
  */
  
 // array for JSON response
@@ -19,7 +19,7 @@ if (isset($_GET["pid"])) {
     $pid = $_GET['pid'];
  
     // get a user from admin_users table
-    $result = mysql_query("SELECT *FROM admin_user WHERE pid = $pid");
+    $result = mysql_query("SELECT *FROM admin_users WHERE pid = $pid");
  
     if (!empty($result)) {
         // check for empty result
